@@ -1,0 +1,17 @@
+# API keys: never commit
+.Renviron
+
+# Microdata: downloaded from INEI, never commit
+data/
+*.dta
+*.sav
+
+# R session files
+.Rhistory
+.RData
+.Rproj.user/
+
+# System files
+.DS_Store
+Thumbs.db
+desktop.ini

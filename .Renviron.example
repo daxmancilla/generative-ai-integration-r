@@ -1,0 +1,7 @@
+# Copy these lines into your personal .Renviron (usethis::edit_r_environ()),
+# paste your keys after the "=" sign without quotes, and restart R.
+# Never commit a file that contains real keys.
+
+GEMINI_API_KEY=
+GROQ_API_KEY=
+NVIDIA_API_KEY=
