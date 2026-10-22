@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite it as below."
+type: software
+title: "Generative AI Integration in R: LLM APIs and Structured Output"
+abstract: >-
+  R scripts that integrate large language models into economic and statistical
+  analysis with the ellmer package: Google Gemini and Groq APIs, any
+  OpenAI-compatible endpoint, structured output with typed schemas, checks of
+  model figures against official statistics and AI-assisted coding with
+  GitHub Copilot in RStudio.
+authors:
+  - family-names: "Mancilla Paucar"
+    given-names: "Dax Kevin"
+repository-code: "https://github.com/daxmancilla/generative-ai-integration-r"
+license: MIT
+version: "1.0.0"
+date-released: "2026-10-22"
+keywords:
+  - generative AI
+  - large language models
+  - ellmer
+  - structured output
+  - R
