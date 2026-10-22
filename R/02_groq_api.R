@@ -112,6 +112,11 @@ comparison %>% select(country, starts_with("gap_"))
 # =============================================================================
 # Providers without their own function in {ellmer} work through
 # chat_openai_compatible(), with the provider's address and key.
+
+# The NVIDIA catalogue is public: check which models are available today
+nvidia_models <- jsonlite::fromJSON("https://integrate.api.nvidia.com/v1/models")$data
+nvidia_models %>% filter(grepl("nemotron|deepseek|gpt-oss", id)) %>% select(id, owned_by)
+
 savings_model <- lm(sr ~ pop15 + pop75 + dpi + ddpi, data = LifeCycleSavings)
 output <- paste(capture.output(summary(savings_model)), collapse = "\n")
 
@@ -119,7 +124,7 @@ nvidia <- chat_openai_compatible(
   base_url    = "https://integrate.api.nvidia.com/v1",
   name        = "NVIDIA NIM",
   credentials = function() Sys.getenv("NVIDIA_API_KEY"),
-  model       = "openai/gpt-oss-120b"   # any model listed in the NVIDIA catalogue
+  model       = "deepseek-ai/deepseek-v4.1-flash"   # must be in the list above
 )
 
 nvidia$chat(paste(
